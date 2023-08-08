@@ -7,11 +7,13 @@
 </head>
 <body>
     <div style="padding: 5px; background-color: green;">
-        <button  onclick="saludar()" type="button">Saludar</button>
+        <button  onclick="saludar(event)" type="button">Saludar</button>
     </div>
     <script> 
-    function saludar(){
+    function saludar(event){
         alert("Hola!");
+        event.stopPropagation();
+
     }
     </script>
     <script src="js/eventos.js"></script>
